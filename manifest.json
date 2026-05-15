@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Gamepass Creator",
+  "version": "2.0.0",
+  "description": "Advanced gamepass creation and management tool for Roblox experiences",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.roblox.com/*",
+    "https://apis.roblox.com/*",
+    "https://games.roblox.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.roblox.com/*"
+      ],
+      "js": [
+        "src/modules/GamepassDashboard.js",
+        "src/content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "assets/icon-16.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
+  },
+  "action": {
+    "default_title": "Roblox Gamepass Creator"
+  }
+}
